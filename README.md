@@ -2,6 +2,7 @@
 Application de gestion des élèves pour Simplon
 
 ##Objectifs et consignes du projet
+
 L'objectif du projet est de créer une application de gestion des élèves qui permet de gérer les absences et les retards. 
 Consignes du projet :
 1 - Créer un site responsive
