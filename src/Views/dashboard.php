@@ -11,11 +11,7 @@ $promotions = $promoRepository->getAllPromotions();
 ?>
 
 
-<?php
-if (isset($_SESSION['role'])) {
-  if ($_SESSION['role'] == 'admin') {
-    echo "<h2 class= m-2 >Bienvenue, Admin!</h2>";
-?>
+
     <div class="m-2" id="bodyDashboard"></div>
 
     <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -73,10 +69,10 @@ if (isset($_SESSION['role'])) {
               <tr>
               <th class="d-none" scope="col">IDPromo</th>
                 <th scope="col">Promotions</th>
-                <th scope="col">Début</th>
-                <th scope="col">Fin</th>
-                <th scope="col">Place</th>
-                <th scope="col">Actions</th>
+                <th scope="col">Date début</th>
+                <th scope="col">Date fin</th>
+                <th scope="col">Nombre élèves</th>
+                <!-- <th scope="col">Actions</th> -->
               </tr>
             </thead>
             <tbody>
@@ -111,9 +107,3 @@ if (isset($_SESSION['role'])) {
 
 
 
-<?php
-  } elseif ($_SESSION['role'] == 'user') {
-    echo "<h2>Bonjour " . $_SESSION['prenom'] . "!</h2>";
-  }
-}
-?>

@@ -1,4 +1,3 @@
-
 let connexionButton = document.getElementById("connexionButton");
 let body = document.getElementById("body");
 
@@ -12,13 +11,13 @@ if (connexionButton) {
 function sendConnexionForm(event) {
   event.preventDefault();
 
-  let inputEmail = inputEmail.value;
-  let inputMotDePasse = inputMotDePasse.value;
+  let email = inputEmail.value;
+  let motdepasse = inputMotDePasse.value;
 
   let url = "/";
   let user = {
-    email: inputEmail,
-    motdepasse: inputMotDePasse,
+    email: email,
+    motdepasse: motdepasse,
   };
 
   fetch(url, {
