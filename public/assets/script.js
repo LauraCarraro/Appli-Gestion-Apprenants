@@ -17,7 +17,7 @@ function sendConnexionForm(event) {
   let url = "/";
   let user = {
     email: email,
-    motdepasse: motdepasse,
+    password: motdepasse,
   };
 
   fetch(url, {
@@ -31,7 +31,7 @@ function sendConnexionForm(event) {
       return response.text();
     })
     .then((result) => {
-      body.innerHTML = "";
-      body.innerHTML = result;    
+      console.log(document.body);
+      document.body.innerHTML = result;    
     });
 };

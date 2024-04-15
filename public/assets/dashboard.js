@@ -1,7 +1,12 @@
-export function deconnexion() {
-    const body = document.body;
-    const deconnexionBtn = document.getElementById("deconnexionBtn");
-  
+let deco = document.getElementById("deconnexionBtn");
+  console.log(deco);
+  if (deco) {
+    deco.addEventListener("click", deconnexion());
+  }
+  function deconnexion() {
+    let body = document.body;
+    let deconnexionBtn = document.getElementById("deconnexionBtn");
+    console.log("hello");
     if (deconnexionBtn) {
       deconnexionBtn.addEventListener("click", () => {
         fetch("/deconnexion")
@@ -23,11 +28,16 @@ export function deconnexion() {
       console.error("deconnexionBtn not found in the DOM");
     }
   }
+
+  let ajouterPromotion = document.getElementById("ajouterPromotion");
   
-  export function displayFormPromotion() {
+  if (ajouterPromotion) {
+    ajouterPromotion.addEventListener("click", displayFormPromotion());
+  }
+function displayFormPromotion() {
     let contentPromotion = document.getElementById("contentPromotion");
     let ajouterPromotion = document.getElementById("ajouterPromotion");
-  
+
     if (ajouterPromotion) {
       ajouterPromotion.addEventListener("click", () => {
         fetch("/ajouterPromotion")
@@ -51,31 +61,31 @@ export function deconnexion() {
     }
   }
   
-  export function createNewPromo() {
-    const createNewPromoBtn = document.getElementById("createNewPromoBtn");
-    const body = document.body;
-  
+ function createNewPromo() {
+    let createNewPromoBtn = document.getElementById("createNewPromoBtn");
+    let body = document.body;
+  console.log(createNewPromoBtn);
     if (createNewPromoBtn) {
       createNewPromoBtn.addEventListener("click", (event) => {
         event.preventDefault();
   
-        const inputPromoNom = document.getElementById("promoNom");
-        const inputDateDebut = document.getElementById("dateDebut");
-        const inputDateFin = document.getElementById("dateFin");
-        const inputPlaceDispo = document.getElementById("placeDispo");
+        let inputPromoNom = document.getElementById("Nom");
+        let inputDateDebut = document.getElementById("Date_debut");
+        let inputDateFin = document.getElementById("Date_fin");
+        let inputNbApprenants = document.getElementById("Nombre_apprenants");
   
-        const inputPromoNomValue = inputPromoNom.value;
-        const inputDateDebutValue = inputDateDebut.value;
-        const inputDateFinValue = inputDateFin.value;
-        const inputPlaceDispoValue = inputPlaceDispo.value;
+        let inputPromoNomValue = inputPromoNom.value;
+        let inputDateDebutValue = inputDateDebut.value;
+        let inputDateFinValue = inputDateFin.value;
+        let inputNbApprenantsValue = inputNbApprenants.value;
   
-        const url = "/ajouterPromotion";
+        let url = "/ajouterPromotion";
   
-        const promo = {
-          promoNom: inputPromoNomValue,
-          dateDebut: inputDateDebutValue,
-          dateFin: inputDateFinValue,
-          placeDispo: inputPlaceDispoValue,
+        let promo = {
+          Nom: inputPromoNomValue,
+          Date_debut: inputDateDebutValue,
+          Date_fin: inputDateFinValue,
+          Nombre_apprenants: inputNbApprenantsValue,
         };
   
         fetch(url, {
@@ -97,9 +107,9 @@ export function deconnexion() {
     }
   }
   
-  export function displayThisPromo() {
+  function displayThisPromo() {
     let displayThisPromoBtn = document.getElementById("displayThisPromoBtn");
-    const body = document.body;
+    let body = document.body;
   
     if (displayThisPromoBtn) {
       displayThisPromoBtn.addEventListener("click", () => {
@@ -124,11 +134,11 @@ export function deconnexion() {
     }
   }
   
-  export function retourVersTousLesPromo() {
-    const btnRetourVersTousLesPromo = document.getElementById(
+  function retourVersTousLesPromo() {
+    let btnRetourVersTousLesPromo = document.getElementById(
       "btnRetourVersTousLesPromo"
     );
-    const body = document.body;
+    let body = document.body;
   
     if (btnRetourVersTousLesPromo) {
       btnRetourVersTousLesPromo.addEventListener("click", () => {
@@ -155,11 +165,11 @@ export function deconnexion() {
     }
   }
   
-  export function retourVersTousLesPromo1() {
-    const btnRetourVersTousLesPromo1 = document.getElementById(
+  function retourVersTousLesPromo1() {
+    let btnRetourVersTousLesPromo1 = document.getElementById(
       "btnRetourVersTousLesPromo1"
     );
-    const body = document.body;
+    let body = document.body;
   
     btnRetourVersTousLesPromo1.addEventListener("click", () => {
       fetch("/dashboard")

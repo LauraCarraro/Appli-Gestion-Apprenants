@@ -13,6 +13,11 @@ $routeComposee = Routing::routeComposee($route);
 
 switch ($route) {
   case HOME_URL:
+    //Vérifier si connecté, si c'est le cas rediriger
+    if (isset($_SESSION['connecté']) && $_SESSION['connecté'] === true) {
+      header('Location: ' . HOME_URL . 'dashboard');
+      $HomeController->displayDashboard();
+    }
 
     if ($methode == 'POST') {
       $HomeController->authAdmin();
@@ -22,12 +27,8 @@ switch ($route) {
     break;
 
   case HOME_URL . 'dashboard':
-    if ($methode == 'POST') {
-      $PromoController->createPromo();
-    } else {
-      $HomeController->displayDashboard();
-    }
-
+    $HomeController->displayDashboard();
+    
     break;
 
   case HOME_URL . 'ajouterPromotion':

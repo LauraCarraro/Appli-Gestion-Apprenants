@@ -1,6 +1,4 @@
-<h3 class="m-3">Création d’une promotion</h3>
-
-<p class="m-3">tableau des promotions de Simplon</p>
+<h3 class="m-3">Ajouter une promotion</h3>
 
 
 <form class="p-3 m-5 bg-light text-dark" method="post">
@@ -20,8 +18,8 @@
         <input type="date" name="dateFin" class="form-control" id="dateFin" aria-describedby="emailHelp">
     </div>
     <div class="mb-3">
-        <label for="placeDispo" class="form-label">Place(s) disponible(s)</label>
-        <input type="number" name="placeDispo" class="form-control" id="placeDispo" aria-describedby="emailHelp">
+        <label for="placeDispo" class="form-label">Nombre d'élèves</label>
+        <input type="number" name="nbApprenants" class="form-control" id="nbApprenants" aria-describedby="emailHelp">
     </div>
 
     <div class="  d-flex justify-content-between mb-3">
