@@ -2,14 +2,14 @@
 
 use src\Controllers\HomeController;
 use src\Controllers\PromoController;
-// use src\Services\Routing;
+use src\Services\Routing;
 
 $HomeController = new HomeController;
 $PromoController = new PromoController;
 
 $route = $_SERVER['REDIRECT_URL'];
 $methode = $_SERVER['REQUEST_METHOD'];
-// $routeComposee = Routing::routeComposee($route);
+$routeComposee = Routing::routeComposee($route);
 
 switch ($route) {
   case HOME_URL:

@@ -19,13 +19,13 @@ class PromoController
           $decodedRequest = json_decode($request);
 
           if ($decodedRequest) {
-              $promoNom = htmlspecialchars($decodedRequest->promoNom);
-              $dateDebut = htmlspecialchars($decodedRequest->dateDebut);
-              $dateFin = htmlspecialchars($decodedRequest->dateFin);
-              $placeDispo = htmlspecialchars($decodedRequest->placeDispo);
+              $Nom = htmlspecialchars($decodedRequest->Nom);
+              $Date_debut = htmlspecialchars($decodedRequest->Date_debut);
+              $Date_fin = htmlspecialchars($decodedRequest->Date_fin);
+              $Nombre_apprenants = htmlspecialchars($decodedRequest->Nombre_apprenants);
 
               $promoRepository = new PromoRepository();
-              $promoRepository->insertPromo($promoNom, $dateDebut, $dateFin, $placeDispo);
+              $promoRepository->insertPromo($Nom, $Date_debut, $Date_fin, $Nombre_apprenants);
 
               include_once __DIR__ . '/../Views/dashboard.php';
           }

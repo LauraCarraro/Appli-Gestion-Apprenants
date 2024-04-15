@@ -23,11 +23,11 @@
 
       <div class="mb-3">
         <label for="email" class="form-label">Email*</label>
-        <input type="email" name="email" class="form-control" id="email" aria-describedby="email" placeholder="Entrez votre e-mail" required>
+        <input type="email" name="email" class="form-control" id="email" aria-describedby="email" placeholder="laura@simplon.co" required>
       </div>
       <div class="mb-3">
         <label for="motdepasse" class="form-label">Mot de passe*</label>
-        <input type="password" name="motdepasse" class="form-control" id="motdepasse" placeholder="Entrez votre mot de passe" required>
+        <input type="password" name="motdepasse" class="form-control" id="motdepasse" placeholder="******" required>
       </div>
       <div id="alertMessage" class="bg-danger text-white mb-3"></div>
 
