@@ -28,7 +28,7 @@ final class Database
         return $this->DB;
     }
 
-    public function initialisationBDD(): string
+    public function initialisationBDD()
     {
         // Vérifier si la base de données est vide
         if ($this->testIfTableUtilisateursExists()) {

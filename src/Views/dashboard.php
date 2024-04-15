@@ -39,7 +39,7 @@ if (isset($_SESSION['role'])) {
             <p class="card-text d-flex justify-content-end"><?php echo date('d-m-Y'); ?></p>
 
             <div class="d-flex justify-content-end">
-              <!-- <span class="badge text-bg-success ">ajouter les cas</span> -->
+
               <button id="" class="btn btn-info">Valider présence</button>
             </div>
           </div>

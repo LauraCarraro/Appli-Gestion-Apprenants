@@ -1,10 +1,9 @@
-import * as serviceNavDec from "./dashboard.js";
 
 let connexionButton = document.getElementById("connexionButton");
 let body = document.getElementById("body");
 
-let email = document.getElementById("email");
-let motdepasse = document.getElementById("motdepasse");
+let inputEmail = document.getElementById("email");
+let inputMotDePasse = document.getElementById("motdepasse");
 
 if (connexionButton) {
   connexionButton.addEventListener("click", sendConnexionForm);
@@ -13,13 +12,13 @@ if (connexionButton) {
 function sendConnexionForm(event) {
   event.preventDefault();
 
-  let emailValue = email.value;
-  let motdepasseValue = motdepasse.value;
+  let inputEmail = inputEmail.value;
+  let inputMotDePasse = inputMotDePasse.value;
 
   let url = "/";
   let user = {
-    email: emailValue,
-    motdepasse: motdepasseValue,
+    email: inputEmail,
+    motdepasse: inputMotDePasse,
   };
 
   fetch(url, {
@@ -34,10 +33,6 @@ function sendConnexionForm(event) {
     })
     .then((result) => {
       body.innerHTML = "";
-      body.innerHTML = result;
-      serviceNavDec.deconnexion();
-      serviceNavDec.displayFormPromotion();
-      serviceNavDec.displayThisPromo()
-      
+      body.innerHTML = result;    
     });
 };
