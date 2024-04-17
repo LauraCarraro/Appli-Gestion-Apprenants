@@ -6,8 +6,8 @@
     <input type="hidden" name="form_id" value="1">
 
     <div class="mb-3">
-        <label for="promoNom" class="form-label">Nom de la promotion</label>
-        <input type="text" name="promoNom" class="form-control" id="promoNom" aria-describedby="emailHelp">
+        <label for="nomPromo" class="form-label">Nom de la promotion</label>
+        <input type="text" name="nomPromo" class="form-control" id="nomPromo" aria-describedby="emailHelp">
     </div>
     <div class="mb-3">
         <label for="dateDebut" class="form-label">Date de début</label>
@@ -18,7 +18,7 @@
         <input type="date" name="dateFin" class="form-control" id="dateFin" aria-describedby="emailHelp">
     </div>
     <div class="mb-3">
-        <label for="placeDispo" class="form-label">Nombre d'élèves</label>
+        <label for="nbApprenants" class="form-label">Nombre d'élèves</label>
         <input type="number" name="nbApprenants" class="form-control" id="nbApprenants" aria-describedby="emailHelp">
     </div>
 

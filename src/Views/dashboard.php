@@ -30,20 +30,22 @@ $promotions = $promoRepository->getAllPromotions();
 
         <div class="card-body">
           <h5 class="card-title d-flex justify-content-start">Cours du jour</h5>
-          <div class="card-text mb-3 bg-light">
+          <div class="card-text mb-3 bg-light position-relative">
             <p class="card-text d-flex justify-content-start">DWWM3 - matin</p>
-            <p class="card-text d-flex justify-content-end"><?php echo date('d-m-Y'); ?></p>
+            <p class="card-text d-flex justify-content-start">15 participants</p>
+            <p class="card-text d-flex justify-content-end position-absolute top-0 end-0"><?php echo date('d-m-Y'); ?></p>
 
             <div class="d-flex justify-content-end">
 
-              <button id="" class="btn btn-info">Valider présence</button>
+              <button id="" class="btn btn-primary">Valider présence</button>
             </div>
           </div>
-          <div class="card-text mb-3 bg-light">
+          <div class="card-text mb-3 bg-light position-relative">
             <p class="card-text d-flex justify-content-start">DWWM3 - après midi</p>
-            <p class="card-text d-flex justify-content-end"><?php echo date('d-m-Y'); ?></p>
+            <p class="card-text d-flex justify-content-start">15 participants</p>
+            <p class="card-text d-flex justify-content-end position-absolute top-0 end-0"><?php echo date('d-m-Y'); ?></p>
             <div class="d-flex justify-content-end">
-              <button id="" class="btn btn-success">Signatures</button>
+              <button id="btnSignatures" class="btn btn-success">Signatures recueillies</button>
             </div>
           </div>
         </div>

@@ -69,12 +69,11 @@ function displayFormPromotion() {
       createNewPromoBtn.addEventListener("click", (event) => {
         event.preventDefault();
   
-        let inputPromoNom = document.getElementById("Nom");
-        let inputDateDebut = document.getElementById("Date_debut");
-        let inputDateFin = document.getElementById("Date_fin");
-        let inputNbApprenants = document.getElementById("Nombre_apprenants");
-  
-        let inputPromoNomValue = inputPromoNom.value;
+        let inputNomPromo = document.getElementById("nomPromo");
+        let inputDateDebut = document.getElementById("dateDebut");
+        let inputDateFin = document.getElementById("dateFin");
+        let inputNbApprenants = document.getElementById("nbApprenants");
+        let inputNomPromoValue = inputNomPromo.value;
         let inputDateDebutValue = inputDateDebut.value;
         let inputDateFinValue = inputDateFin.value;
         let inputNbApprenantsValue = inputNbApprenants.value;
@@ -82,7 +81,7 @@ function displayFormPromotion() {
         let url = "/ajouterPromotion";
   
         let promo = {
-          Nom: inputPromoNomValue,
+          Nom: inputNomPromoValue,
           Date_debut: inputDateDebutValue,
           Date_fin: inputDateFinValue,
           Nombre_apprenants: inputNbApprenantsValue,
