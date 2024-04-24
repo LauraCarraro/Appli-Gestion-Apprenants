@@ -15,5 +15,3 @@ Consignes du projet :
 7. Déployer votre application sur le serveur de Simplon
 8. Faire des tests en développement
 9. Proposer un gitflow précis et construit
-
-## Le fichier config
