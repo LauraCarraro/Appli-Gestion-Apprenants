@@ -13,7 +13,6 @@ $routeComposee = Routing::routeComposee($route);
 
 switch ($route) {
   case HOME_URL:
-    //Vérifier si connecté, si c'est le cas rediriger
     if (isset($_SESSION['connecté']) && $_SESSION['connecté'] === true) {
       header('Location: ' . HOME_URL . 'dashboard');
       $HomeController->displayDashboard();

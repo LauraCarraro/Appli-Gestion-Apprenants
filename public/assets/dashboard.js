@@ -50,7 +50,7 @@ function displayFormPromotion() {
           .then((data) => {
             contentPromotion.innerHTML = data;
             createNewPromo();
-            retourVersTousLesPromo();
+            retourListePromo();
           })
           .catch((error) => {
             console.error("There was a problem with the fetch operation:", error);
@@ -121,8 +121,6 @@ function displayFormPromotion() {
           })
           .then((data) => {
             body.innerHTML = data;
-            servicePromo.displayFormAjouterApprenant();
-            servicePromo.retourVersTousLesPromoDeApprenant();
           })
           .catch((error) => {
             console.error("There was a problem with the fetch operation:", error);
@@ -133,14 +131,14 @@ function displayFormPromotion() {
     }
   }
   
-  function retourVersTousLesPromo() {
-    let btnRetourVersTousLesPromo = document.getElementById(
-      "btnRetourVersTousLesPromo"
+  function retourListePromo() {
+    let btnRetourListePromo = document.getElementById(
+      "btnRetourListePromo"
     );
     let body = document.body;
   
-    if (btnRetourVersTousLesPromo) {
-      btnRetourVersTousLesPromo.addEventListener("click", () => {
+    if (btnRetourListePromo) {
+      btnRetourListePromo.addEventListener("click", () => {
         fetch("/dashboard")
           .then((response) => {
             if (!response.ok) {
@@ -160,17 +158,17 @@ function displayFormPromotion() {
           });
       });
     } else {
-      console.error("btnRetourVersTousLesPromo not found in the DOM");
+      console.error("btnRetourListePromo not found in the DOM");
     }
   }
   
-  function retourVersTousLesPromo1() {
-    let btnRetourVersTousLesPromo1 = document.getElementById(
-      "btnRetourVersTousLesPromo1"
+  function retourListePromo() {
+    let btnRetourListePromo = document.getElementById(
+      "btnRetourListePromo"
     );
     let body = document.body;
   
-    btnRetourVersTousLesPromo1.addEventListener("click", () => {
+    btnRetourListePromo.addEventListener("click", () => {
       fetch("/dashboard")
         .then((response) => {
           if (!response.ok) {
@@ -184,7 +182,7 @@ function displayFormPromotion() {
           displayFormPromotion();
           deconnexion();
           createNewPromo();
-          retourVersTousLesPromo();
+          retourListePromo();
           displayThisPromo();
         })
         .catch((error) => {

@@ -23,9 +23,9 @@
     </div>
 
     <div class="  d-flex justify-content-between mb-3">
-        <input id="btnRetourVersTousLesPromo" class=" mb-3 btn btn-primary" value="Retour" > 
+        <input id="btnRetourListePromo" class=" mb-3 btn btn-primary" value="Retour" style="width: 20%;" > 
 
-        <input id="createNewPromoBtn" type="submit" class="mb-3 btn btn-primary" value="Sauvegarder"> 
+        <input id="createNewPromoBtn" type="submit" class="mb-3 btn btn-primary" value="Sauvegarder" style="width: 20%;"> 
 
     </div>
 </form>

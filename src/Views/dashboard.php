@@ -25,9 +25,7 @@ $promotions = $promoRepository->getAllPromotions();
     </ul>
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
-
-
+    
         <div class="card-body">
           <h5 class="card-title d-flex justify-content-start">Cours du jour</h5>
           <div class="card-text mb-3 bg-light position-relative">
@@ -36,10 +34,9 @@ $promotions = $promoRepository->getAllPromotions();
             <p class="card-text d-flex justify-content-end position-absolute top-0 end-0"><?php echo date('d-m-Y'); ?></p>
 
             <div class="d-flex justify-content-end">
-
-              <button id="" class="btn btn-primary">Valider présence</button>
+            <button id="" class="btn btn-primary">Valider présence</button>
             </div>
-          </div>
+        </div>
           <div class="card-text mb-3 bg-light position-relative">
             <p class="card-text d-flex justify-content-start">DWWM3 - après midi</p>
             <p class="card-text d-flex justify-content-start">15 participants</p>
@@ -64,8 +61,6 @@ $promotions = $promoRepository->getAllPromotions();
 
 
           </div>
-          <p class="my-3 mx-2">Promos 2024</p>
-
           <table class="table  my-3 mx-2">
             <thead>
               <tr>
@@ -74,7 +69,7 @@ $promotions = $promoRepository->getAllPromotions();
                 <th scope="col">Date début</th>
                 <th scope="col">Date fin</th>
                 <th scope="col">Nombre élèves</th>
-                <!-- <th scope="col">Actions</th> -->
+                <th scope="col">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -86,9 +81,9 @@ $promotions = $promoRepository->getAllPromotions();
                   <td><?php echo $promo->getDateFin(); ?></td>
                   <td><?php echo $promo->getNombreApprenants(); ?></td>
                   <td>
-                    <button type="button" class="btn btn-link">Voir</button>
-                    <button type="button" class="btn btn-link">Editer</button>
-                    <button type="button" class="btn btn-link">Supprimer</button>
+                    <button type="button" id="displayThisPromoBtn" data-promo-id="<?php echo $promo->getId(); ?>" class="voir-btn  btn btn-link">Voir</button>
+                    <button type="button" id="editPromoBtn" data-promo-id="<?php echo $promo->getId(); ?>" class="edit-btn btn btn-link ">Editer</button>
+                    <button type="button" id="deletePromoBtn" data-promo-id="<?php echo $promo->getId(); ?>" class="delete-btn btn btn-link ">Supprimer</button>
                   </td>
                 </tr>
               <?php endforeach; ?>
